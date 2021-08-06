@@ -4,11 +4,11 @@
 
 #### 1. Create a fully managed TLS-enabled Redis Enterprise database instance from GCP Marketplace
 Write down the following information from SM:  
-Public endpoint service name  
-Public endpoint service port   
-Default user's password    
-Turn on SSL Client Authentication     
-Download the proxy CA certificate: redislabs_ca_cert.pem
+* Public endpoint service name  
+* Public endpoint service port   
+* Default user's password    
+* Turn on SSL Client Authentication     
+* Download the proxy CA certificate: redislabs_ca_cert.pem
 
 
   
