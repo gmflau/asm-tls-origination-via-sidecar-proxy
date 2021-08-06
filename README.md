@@ -39,7 +39,7 @@ EOF
 
 #### 3. Create a K8 secret to store the proxy CA certificate
 ```
-kubectl create secret generic my-cert \
+kubectl create secret generic redb-cert \
 --from-file=redislabs_ca_cert.pem
 ```
 
@@ -57,7 +57,7 @@ spec:
   trafficPolicy:
     tls:
       mode: SIMPLE
-      caCertificates: /etc/my-cert/redislabs_ca_cert.pem
+      caCertificates: /etc/redb-cert/redislabs_ca_cert.pem
 EOF
 ```  
   
@@ -84,8 +84,8 @@ spec:
       annotations:
         sidecar.istio.io/logLevel: debug
         sidecar.istio.io/inject: "true"
-        sidecar.istio.io/userVolumeMount: '[{"name":"my-cert", "mountPath":"/etc/my-cert", "readonly":true}]'
-        sidecar.istio.io/userVolume: '[{"name":"my-cert", "secret":{"secretName":"my-cert"}}]'
+        sidecar.istio.io/userVolumeMount: '[{"name":"redb-cert", "mountPath":"/etc/redb-cert", "readonly":true}]'
+        sidecar.istio.io/userVolume: '[{"name":"redb-cert", "secret":{"secretName":"redb-cert"}}]'
     spec:
       containers:
         - image: redis
