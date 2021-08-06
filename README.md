@@ -97,8 +97,15 @@ EOF
   
 
 #### 6. Verify the TLS Origination connection
+Run the following command to locate the redis-client pod name:  
 ```
-kubectl exec -ti deploy/redis-client -c redis-client -- bash
+kubectl get pods
+```
+```
+kubectl exec -it pod/redis-client-<----------->  -c redis-client  /bin/bash
+  
+For example,
+kubectl exec -it pod/redis-client-6fdbfc948-9wgrc  -c redis-client  /bin/bash
 ```
 ```
 redis-cli -h <REPLACE_WITH_REDIS_HOST> -p <REPLACE_WITH_REDIS_PORT> -a <REPLACE_WITH_YOUR_PASSWORD>
@@ -106,11 +113,4 @@ set "hello" "Redis Labs"
 get "hello"
 ```
   
-
-
-#### 7. 
-
-
-
-   
 
