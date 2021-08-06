@@ -3,7 +3,7 @@
 
 
 #### 1. Create a fully managed TLS-enabled Redis Enterprise database instance from GCP Marketplace
-Write down the following information from SM:  
+Collect the following information from SM:  
 * Public endpoint service name  
 * Public endpoint service port   
 * Default user's password    
