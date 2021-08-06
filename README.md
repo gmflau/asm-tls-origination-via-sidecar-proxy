@@ -101,12 +101,14 @@ Run the following command to locate the redis-client pod name:
 ```
 kubectl get pods
 ```
+Get a shell to the redis-client container:  
 ```
 kubectl exec -it pod/redis-client-<----------->  -c redis-client  /bin/bash
   
 For example,
 kubectl exec -it pod/redis-client-6fdbfc948-9wgrc  -c redis-client  /bin/bash
 ```
+Verify the connection using standard TCP to connect to a TLS-enabled Redis Enterprise database instance via Istio sidecar:  
 ```
 redis-cli -h <REPLACE_WITH_REDIS_HOST> -p <REPLACE_WITH_REDIS_PORT> -a <REPLACE_WITH_YOUR_PASSWORD>
 set "hello" "Redis Labs"
