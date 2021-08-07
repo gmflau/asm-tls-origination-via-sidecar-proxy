@@ -105,8 +105,6 @@ EOF
 #### 6. Verify the TLS Origination connection
 Run the following command to locate the redis-client pod name:  
 ```
-If you are not already in the "redis" namespace, you can set your namespace context to "redis" as follows:  
-kubectl config set-context --current --namespace=redis  
 kubectl get pods
 ```
 Get a shell to the redis-client container:  
