@@ -9,7 +9,7 @@ Collect the following information from Redis Enterprise Cloud Subscription Manag
 * Public endpoint service port   
 * Default user's password    
 * Turn on SSL Client Authentication (Note: DO NOT enforce client authentication)
-* Download the proxy CA certificate: redislabs_ca_cert.pem (Note: click 
+* Download the proxy CA certificate: redislabs_ca_cert.pem (Note: click "Download Redis Labs' Certification Authority" link)
 
 
   
