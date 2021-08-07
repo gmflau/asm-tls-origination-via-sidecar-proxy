@@ -14,7 +14,7 @@ Collect the following information from Redis Enterprise Cloud Subscription Manag
 
   
 #### 2. Create Service Entry for the external fully managed Redis Enterprise database instance  
-If you are not already in the "redis" namespace, you can set your namespace context to "redis" as follows since our tutorial is based on the "redis" namespace.   
+If you are not already in the "redis" namespace, you can set your namespace context to "redis" as follows since this tutorial is based on the "redis" namespace.   
 ``` 
 kubectl config set-context --current --namespace=redis  
 ```     
