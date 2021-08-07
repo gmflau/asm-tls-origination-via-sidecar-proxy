@@ -115,5 +115,6 @@ redis-cli -h <REPLACE_WITH_REDIS_HOST> -p <REPLACE_WITH_REDIS_PORT> -a <REPLACE_
 set "hello" "Redis Labs"
 get "hello"
 ```
+It should return "Redis Labs".  
   
 
