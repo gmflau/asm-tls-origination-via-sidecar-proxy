@@ -13,7 +13,12 @@ Collect the following information from Redis Enterprise Cloud Subscription Manag
 
 
   
-#### 2. Create Service Entry for the external fully managed Redis Enterprise database instance
+#### 2. Create Service Entry for the external fully managed Redis Enterprise database instance  
+If you are not already in the "redis" namespace, you can set your namespace context to "redis" as follows since our tutorial is based on the "redis" namespace.   
+``` 
+kubectl config set-context --current --namespace=redis  
+```     
+Set the following environment variables:  
 ```
 export REDIS_HOST=<REDB's public endpoint service name>
 export REDIS_PORT=<REDB's public endpoint service port>
@@ -100,6 +105,8 @@ EOF
 #### 6. Verify the TLS Origination connection
 Run the following command to locate the redis-client pod name:  
 ```
+If you are not already in the "redis" namespace, you can set your namespace context to "redis" as follows:  
+kubectl config set-context --current --namespace=redis  
 kubectl get pods
 ```
 Get a shell to the redis-client container:  
